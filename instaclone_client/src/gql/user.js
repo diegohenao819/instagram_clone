@@ -1,4 +1,4 @@
-import {gql} from "@apollo/client";
+import { gql } from "@apollo/client";
 
 export const REGISTER = gql`
   mutation register($input: UserInput) {
@@ -12,10 +12,27 @@ export const REGISTER = gql`
   }
 `;
 
-export const LOGIN = gql `
-  mutation login ($input: LoginInput){
-    login(input: $input){
+export const LOGIN = gql`
+  mutation login($input: LoginInput) {
+    login(input: $input) {
       token
+    }
+  }
+`;
+
+export const GET_USER = gql`
+  query getUser($id: ID, $username: String) {
+    getUser(id: $id, username: $username) {
+      id
+      name
+      username
+      email
+      email
+      siteWeb
+      description
+      password
+      avatar
+      createAt
     }
   }
 `;

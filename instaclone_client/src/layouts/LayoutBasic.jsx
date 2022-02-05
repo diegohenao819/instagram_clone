@@ -1,13 +1,14 @@
 import React from "react";
 import { Fragment } from "react/cjs/react.production.min";
 import { Container } from "semantic-ui-react";
+import Header from "../components/Header";
 
 export default function LayoutBasic(props) {
   const { children } = props;
-  console.log(props.children.type)
+  console.log(props.children.type);
   return (
     <Fragment>
-      <h1>HEADER LAYTOUT BASIC</h1>
+      <Header></Header>
       <Container className="layout-basic">{children}</Container>
     </Fragment>
   );
